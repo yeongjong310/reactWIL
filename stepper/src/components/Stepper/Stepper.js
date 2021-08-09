@@ -17,7 +17,7 @@ const ButtonPropsType = exact({
 
 export class Stepper extends Component{
   static defaultProps = {
-    direction: 'vertical',
+    mode: 'vertical',
     buttonProps: {
       minus: {
         label: '카운트 감소',
@@ -36,7 +36,7 @@ export class Stepper extends Component{
 
   static propTypes = {
     id: string.isRequired,
-    direction: oneOf(['vertical', 'horizontal']),
+    mode: oneOf(['vertical', 'horizontal']),
     buttonProps: ButtonPropsType,
     min: StringOrNumberType,
     max: StringOrNumberType,
@@ -66,7 +66,7 @@ export class Stepper extends Component{
 
   render() {
     const { count } = this.state;
-    const { id, direction, min, max, buttonProps: { plus, minus} } = this.props;
+    const { id, mode, min, max, buttonProps: { plus, minus} } = this.props;
   
     return(
       <div 
@@ -74,24 +74,24 @@ export class Stepper extends Component{
         aria-live="polite"
         aria-atomic="true"
         aria-describedby={id}
-        className={direction === 'vertical' ? 'stepper__vertical' : 'stepper__horizontal'}
+        className={`stepper__${mode}`}
       >  
         <A11yHidden id={id}>
           증가 또는 감소 버튼을 눌러, 스텝퍼의 값을 변경할 수 있습니다.
         </A11yHidden>
         <AngleButton 
-          direction={direction === 'vertical' ? 'left' : 'up'} 
-          onClick={() => {this.handleUpdate(direction === 'vertical' ? 'decrement' : 'increment')}}
-          aria-label={direction === 'vertical' ? minus.label : plus.label}
-          title={direction === 'vertical' ? minus.withTitle && minus.label : plus.withTitle && plus.label}
+          direction={mode === 'vertical' ? 'left' : 'up'} 
+          onClick={() => {this.handleUpdate(mode === 'vertical' ? 'decrement' : 'increment')}}
+          aria-label={mode === 'vertical' ? minus.label : plus.label}
+          title={mode === 'vertical' ? minus.withTitle && minus.label : plus.withTitle && plus.label}
           disabled={min >= count}
         />
         <output className="output">{count}</output>
         <AngleButton 
-          direction={direction === 'vertical' ? 'right' : 'down'} 
-          onClick={() => this.handleUpdate(direction === 'vertical' ? 'increment' : 'decrement')}
-          aria-label={direction === 'vertical' ? plus.label : minus.label}
-          title={direction === 'vertical' ? plus.withTitle && plus.label : minus.withTitle && minus.label}
+          direction={mode === 'vertical' ? 'right' : 'down'} 
+          onClick={() => this.handleUpdate(mode === 'vertical' ? 'increment' : 'decrement')}
+          aria-label={mode === 'vertical' ? plus.label : minus.label}
+          title={mode === 'vertical' ? plus.withTitle && plus.label : minus.withTitle && minus.label}
           disabled={max <= count}
         />
       </div>

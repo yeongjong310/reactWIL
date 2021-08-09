@@ -5,7 +5,8 @@ import { Stepper } from 'components';
 function App() {
   return (
     <div className="App">
-      <Stepper id="stepper-desc"/>
+      <Stepper id="stepper-desc" mode="vertical"/>
+      <Stepper id="stepper-desc" mode="horizontal"/>
     </div>
   );
 }
