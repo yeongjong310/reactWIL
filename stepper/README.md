@@ -11,9 +11,12 @@ Stepper 컴포넌트 Figma 디자인 파일을 분석해 React 컴포넌트를 �
 - [ ] 숫자 값 자리수에 따라 유연하게 좌우 버튼이 배치되도록 구현한다. (너비 또는 높이 고정 X)
 - [ ] 컴포넌트 테스트 수행은 권장사항(옵션)이다.
 
-## 목표 디자인
+## 디자인 분석
 
-1. 방향 설정
+- 방향을 설정할 수 있다.
+
 ![orientation](./img/orientation.gif)
-2. 아이콘 disabled
+
+- 상태에 따라 아이콘은 (normal, active, disabled) 중 하나로 변경되어야 한다.
+
 ![disabled](./img/iconDisabled.png)
