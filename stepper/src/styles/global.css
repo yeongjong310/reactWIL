@@ -1,0 +1,11 @@
+body {
+  font: 400 1rem/1.5 'Spoqa Hans Sans', sans-serif;
+}
+
+button {
+  background-color: #fff;
+  border: 0;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+}
