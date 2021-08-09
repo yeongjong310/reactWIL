@@ -52,6 +52,8 @@ export class Stepper extends Component{
     const updateCount = count < min ? min : count > max ? max : count;
   
     return {
+      isMinCount: min >= count,
+      isMaxCount: max <= count,
       count: updateCount,
     };
   }
@@ -65,8 +67,8 @@ export class Stepper extends Component{
   };
 
   render() {
-    const { count } = this.state;
-    const { id, mode, min, max, buttonProps: { plus, minus} } = this.props;
+    const { count, isMinCount, isMaxCount } = this.state;
+    const { id, mode, buttonProps: { plus, minus} } = this.props;
   
     return(
       <div 
@@ -79,20 +81,23 @@ export class Stepper extends Component{
         <A11yHidden id={id}>
           증가 또는 감소 버튼을 눌러, 스텝퍼의 값을 변경할 수 있습니다.
         </A11yHidden>
+
         <AngleButton 
           direction={mode === 'vertical' ? 'left' : 'up'} 
           onClick={() => {this.handleUpdate(mode === 'vertical' ? 'decrement' : 'increment')}}
           aria-label={mode === 'vertical' ? minus.label : plus.label}
           title={mode === 'vertical' ? minus.withTitle && minus.label : plus.withTitle && plus.label}
-          disabled={min >= count}
+          disabled={mode === 'vertical' ? isMinCount : isMaxCount}
         />
+
         <output className="output">{count}</output>
+
         <AngleButton 
           direction={mode === 'vertical' ? 'right' : 'down'} 
           onClick={() => this.handleUpdate(mode === 'vertical' ? 'increment' : 'decrement')}
           aria-label={mode === 'vertical' ? plus.label : minus.label}
           title={mode === 'vertical' ? plus.withTitle && plus.label : minus.withTitle && minus.label}
-          disabled={max <= count}
+          disabled={mode === 'vertical' ? isMaxCount : isMinCount}
         />
       </div>
     )
