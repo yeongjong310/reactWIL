@@ -14,6 +14,6 @@ Stepper 컴포넌트 Figma 디자인 파일을 분석해 React 컴포넌트를 �
 ## 목표 디자인
 
 1. 방향 설정
-![orientation](/img/orientation.gif)
+![orientation](./img/orientation.gif)
 2. 아이콘 disabled
-![disabled](/img/iconDisabled.png)
+![disabled](./img/iconDisabled.png)
