@@ -7,12 +7,12 @@
 
   box-sizing: border-box;
   box-shadow: 0px 0px 10px rgba(1, 126, 155, 0.2), 0px 4px 3px rgba(1, 126, 155, 0.1);
-  border-radius: 40px;
+  border-radius: 2.5rem;
 
   color: #009CC1;
-  font-size: 40px;
+  font-size: 2.5rem;
   font-weight: 700;
-  line-height: 40px;
+  line-height: 1;
 }
 
 .stepper__horizontal {
