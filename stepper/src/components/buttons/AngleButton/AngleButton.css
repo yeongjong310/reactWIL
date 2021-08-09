@@ -1,18 +1,23 @@
-.angleBtn__left, 
-.angleBtn__right, 
-.angleBtn__up, 
-.angleBtn__down {
+/*button[class*="angleBtn"]은 
+angleBtn__left, angleBtn__right, angleBtn__up, angleBtn__down 을 포함한다.*/
+
+button[class*="angleBtn"] {
   display: flex;
   justify-content: center;
   align-items: center;
   fill: #009CC1;
 }
 
-.angleBtn__left, 
-.angleBtn__right, 
-.angleBtn__up, 
-.angleBtn__down {
-  fill: #009CC1;
+button[class*="angleBtn"]:active:not(:disabled) path{
+  fill-opacity: 1;
+}
+
+button[class*="angleBtn"]:disabled {
+  cursor: not-allowed;
+}
+
+button[class*="angleBtn"]:disabled path {
+  fill: #AAAAAA;
 }
 
 .angleBtn__right {
@@ -25,17 +30,4 @@
 
 .angleBtn__down {
   transform: rotate(270deg);
-}
-
-.angleBtn__right:active path,
-.angleBtn__left:active path {
-  fill-opacity: 1;
-}
-
-.angleBtn__left:disabled path, 
-.angleBtn__right:disabled path, 
-.angleBtn__up:disabled path, 
-.angleBtn__down:disabled path {
-  fill: #AAAAAA;
-  fill-opacity: 0.5;
 }
