@@ -17,7 +17,7 @@ const ButtonPropsType = exact({
 
 export class Stepper extends Component{
   static defaultProps = {
-    mode: 'vertical',
+    mode: 'horizontal',
     buttonProps: {
       minus: {
         label: '카운트 감소',
@@ -83,21 +83,21 @@ export class Stepper extends Component{
         </A11yHidden>
 
         <AngleButton 
-          direction={mode === 'vertical' ? 'left' : 'up'} 
-          onClick={() => {this.handleUpdate(mode === 'vertical' ? 'decrement' : 'increment')}}
-          aria-label={mode === 'vertical' ? minus.label : plus.label}
-          title={mode === 'vertical' ? minus.withTitle && minus.label : plus.withTitle && plus.label}
-          disabled={mode === 'vertical' ? isMinCount : isMaxCount}
+          direction={mode === 'horizontal' ? 'left' : 'up'} 
+          onClick={() => {this.handleUpdate(mode === 'horizontal' ? 'decrement' : 'increment')}}
+          aria-label={mode === 'horizontal' ? minus.label : plus.label}
+          title={mode === 'horizontal' ? minus.withTitle && minus.label : plus.withTitle && plus.label}
+          disabled={mode === 'horizontal' ? isMinCount : isMaxCount}
         />
 
         <output className="output">{count}</output>
 
         <AngleButton 
-          direction={mode === 'vertical' ? 'right' : 'down'} 
-          onClick={() => this.handleUpdate(mode === 'vertical' ? 'increment' : 'decrement')}
-          aria-label={mode === 'vertical' ? plus.label : minus.label}
-          title={mode === 'vertical' ? plus.withTitle && plus.label : minus.withTitle && minus.label}
-          disabled={mode === 'vertical' ? isMaxCount : isMinCount}
+          direction={mode === 'horizontal' ? 'right' : 'down'} 
+          onClick={() => this.handleUpdate(mode === 'horizontal' ? 'increment' : 'decrement')}
+          aria-label={mode === 'horizontal' ? plus.label : minus.label}
+          title={mode === 'horizontal' ? plus.withTitle && plus.label : minus.withTitle && minus.label}
+          disabled={mode === 'horizontal' ? isMaxCount : isMinCount}
         />
       </div>
     )
