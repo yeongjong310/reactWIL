@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/reactWIL/static/css/main.6432a647.chunk.css",
-    "main.js": "/reactWIL/static/js/main.73c4f329.chunk.js",
-    "main.js.map": "/reactWIL/static/js/main.73c4f329.chunk.js.map",
+    "main.css": "/reactWIL/static/css/main.a639dfcf.chunk.css",
+    "main.js": "/reactWIL/static/js/main.49326b59.chunk.js",
+    "main.js.map": "/reactWIL/static/js/main.49326b59.chunk.js.map",
     "runtime-main.js": "/reactWIL/static/js/runtime-main.6fa2b9da.js",
     "runtime-main.js.map": "/reactWIL/static/js/runtime-main.6fa2b9da.js.map",
     "static/js/2.75190343.chunk.js": "/reactWIL/static/js/2.75190343.chunk.js",
     "static/js/2.75190343.chunk.js.map": "/reactWIL/static/js/2.75190343.chunk.js.map",
     "index.html": "/reactWIL/index.html",
-    "static/css/main.6432a647.chunk.css.map": "/reactWIL/static/css/main.6432a647.chunk.css.map",
+    "static/css/main.a639dfcf.chunk.css.map": "/reactWIL/static/css/main.a639dfcf.chunk.css.map",
     "static/js/2.75190343.chunk.js.LICENSE.txt": "/reactWIL/static/js/2.75190343.chunk.js.LICENSE.txt",
     "static/media/angle-normal.535dbeca.svg": "/reactWIL/static/media/angle-normal.535dbeca.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.6fa2b9da.js",
     "static/js/2.75190343.chunk.js",
-    "static/css/main.6432a647.chunk.css",
-    "static/js/main.73c4f329.chunk.js"
+    "static/css/main.a639dfcf.chunk.css",
+    "static/js/main.49326b59.chunk.js"
   ]
 }
