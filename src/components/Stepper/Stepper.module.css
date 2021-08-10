@@ -7,7 +7,7 @@
 
   box-sizing: border-box;
   box-shadow: 0px 0px 10px rgba(1, 126, 155, 0.2), 0px 4px 3px rgba(1, 126, 155, 0.1);
-  border-radius: 2.5rem;
+  border-radius: 4.5rem;
 
   color: #009CC1;
   font-size: 2.5rem;
@@ -27,6 +27,8 @@
 
 .output {
   user-select: none;
+  text-align: center;
+  width: 4.5rem;
 }
 
 .vertical .output {

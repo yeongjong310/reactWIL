@@ -29,9 +29,9 @@ export class Stepper extends Component{
       }
     },
     min: 0,
-    max: 10,
+    max: 100,
     current: 0,
-    step: 1,
+    step: 10,
   };
 
   static propTypes = {
@@ -69,7 +69,7 @@ export class Stepper extends Component{
   render() {
     const { count, isMinCount, isMaxCount } = this.state;
     const { id, mode, buttonProps: { plus, minus } } = this.props;
-    
+
     return(
       <div 
         role="timer"
