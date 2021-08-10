@@ -1,4 +1,4 @@
-import './Stepper.css';
+import { output, horizontal, vertical } from './Stepper.module.css';
 import { Component } from 'react';
 import { A11yHidden, AngleButton } from 'components'
 import { shape, exact, string, bool, number, oneOfType, oneOf } from 'prop-types';
@@ -68,36 +68,36 @@ export class Stepper extends Component{
 
   render() {
     const { count, isMinCount, isMaxCount } = this.state;
-    const { id, mode, buttonProps: { plus, minus} } = this.props;
-  
+    const { id, mode, buttonProps: { plus, minus } } = this.props;
+    
     return(
       <div 
         role="timer"
         aria-live="polite"
         aria-atomic="true"
         aria-describedby={id}
-        className={`stepper__${mode}`}
+        className={mode === 'horizontal' ? horizontal : vertical}
       >  
         <A11yHidden id={id}>
           증가 또는 감소 버튼을 눌러, 스텝퍼의 값을 변경할 수 있습니다.
         </A11yHidden>
 
         <AngleButton 
-          direction={mode === 'horizontal' ? 'left' : 'up'} 
-          onClick={() => {this.handleUpdate(mode === 'horizontal' ? 'decrement' : 'increment')}}
-          aria-label={mode === 'horizontal' ? minus.label : plus.label}
-          title={mode === 'horizontal' ? minus.withTitle && minus.label : plus.withTitle && plus.label}
-          disabled={mode === 'horizontal' ? isMinCount : isMaxCount}
+          direction={mode === 'horizontal' ? 'right' : 'up'} 
+          onClick={() => { this.handleUpdate('increment') }}
+          aria-label={plus.label}
+          title={plus.withTitle && plus.label}
+          disabled={isMaxCount}
+          style={{ order: mode === 'horizontal' && 1 }}
         />
-
-        <output className="output">{count}</output>
-
+        <output className={output}>{count}</output>
         <AngleButton 
-          direction={mode === 'horizontal' ? 'right' : 'down'} 
-          onClick={() => this.handleUpdate(mode === 'horizontal' ? 'increment' : 'decrement')}
-          aria-label={mode === 'horizontal' ? plus.label : minus.label}
-          title={mode === 'horizontal' ? plus.withTitle && plus.label : minus.withTitle && minus.label}
-          disabled={mode === 'horizontal' ? isMaxCount : isMinCount}
+          direction={mode === 'horizontal' ? 'left' : 'down'} 
+          onClick={() => { this.handleUpdate('decrement') }}
+          aria-label={minus.label}
+          title={minus.withTitle && minus.label}
+          disabled={isMinCount}
+          style={{ order: mode === 'horizontal' && -1 }}
         />
       </div>
     )

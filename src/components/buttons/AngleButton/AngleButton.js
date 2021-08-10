@@ -1,12 +1,14 @@
-import './AngleButton.css';
+import buttonStyle from './AngleButton.module.css';
+
 import { ReactComponent as AngleIconSVG } from 'assets/icons/angle-normal.svg';
 import { oneOf } from 'prop-types';
 
-export function AngleButton({direction, disabled, ...restProps}, ) {
+export function AngleButton({direction, disabled, ...restProps}) {
+  console.log(restProps)
   return (
     <button
       data-testid="angleBtn"
-      className={`angleBtn__${direction}`}
+      className={buttonStyle[direction]}
       disabled={disabled}
       {...restProps}
     >
