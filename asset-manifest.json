@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/reactWIL/static/css/main.1708bec9.chunk.css",
-    "main.js": "/reactWIL/static/js/main.a2c98e63.chunk.js",
-    "main.js.map": "/reactWIL/static/js/main.a2c98e63.chunk.js.map",
+    "main.css": "/reactWIL/static/css/main.6432a647.chunk.css",
+    "main.js": "/reactWIL/static/js/main.73c4f329.chunk.js",
+    "main.js.map": "/reactWIL/static/js/main.73c4f329.chunk.js.map",
     "runtime-main.js": "/reactWIL/static/js/runtime-main.6fa2b9da.js",
     "runtime-main.js.map": "/reactWIL/static/js/runtime-main.6fa2b9da.js.map",
-    "static/js/2.5d61fa0c.chunk.js": "/reactWIL/static/js/2.5d61fa0c.chunk.js",
-    "static/js/2.5d61fa0c.chunk.js.map": "/reactWIL/static/js/2.5d61fa0c.chunk.js.map",
+    "static/js/2.75190343.chunk.js": "/reactWIL/static/js/2.75190343.chunk.js",
+    "static/js/2.75190343.chunk.js.map": "/reactWIL/static/js/2.75190343.chunk.js.map",
     "index.html": "/reactWIL/index.html",
-    "static/css/main.1708bec9.chunk.css.map": "/reactWIL/static/css/main.1708bec9.chunk.css.map",
-    "static/js/2.5d61fa0c.chunk.js.LICENSE.txt": "/reactWIL/static/js/2.5d61fa0c.chunk.js.LICENSE.txt",
+    "static/css/main.6432a647.chunk.css.map": "/reactWIL/static/css/main.6432a647.chunk.css.map",
+    "static/js/2.75190343.chunk.js.LICENSE.txt": "/reactWIL/static/js/2.75190343.chunk.js.LICENSE.txt",
     "static/media/angle-normal.535dbeca.svg": "/reactWIL/static/media/angle-normal.535dbeca.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.6fa2b9da.js",
-    "static/js/2.5d61fa0c.chunk.js",
-    "static/css/main.1708bec9.chunk.css",
-    "static/js/main.a2c98e63.chunk.js"
+    "static/js/2.75190343.chunk.js",
+    "static/css/main.6432a647.chunk.css",
+    "static/js/main.73c4f329.chunk.js"
   ]
 }
