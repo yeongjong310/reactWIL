@@ -1,0 +1,54 @@
+{
+  "name": "reactwil",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run dev -- --open",
+    "dev": "webpack serve -c config/webpack.config.dev.js --node-env=development",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yeongjong310/reactWIL.git"
+  },
+  "keywords": [
+    "react",
+    "webpack",
+    "babel",
+    "postcss"
+  ],
+  "author": "yeongjong310 <tohero21@naver.com>",
+  "devDependencies": {
+    "@babel/core": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
+    "@babel/preset-react": "^7.14.5",
+    "@storybook/addon-actions": "^6.3.7",
+    "@storybook/addon-essentials": "^6.3.7",
+    "@storybook/addon-links": "^6.3.7",
+    "@storybook/react": "^6.3.7",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^6.2.0",
+    "dotenv": "^10.0.0",
+    "style-loader": "^3.2.1",
+    "webpack": "^5.50.0",
+    "webpack-cli": "^4.8.0",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "styled-components": "^5.3.0"
+  },
+  "browserslist": {
+    "development": [
+      "last 2 versions"
+    ],
+    "production": [
+      "defaults",
+      "not dead",
+      "> 1% in KR"
+    ]
+  }
+}
