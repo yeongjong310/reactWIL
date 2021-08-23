@@ -1,11 +1,13 @@
 require('dotenv').config();
 
+const getWebpackAliasFromJsConfig  = require('../getWebpackAliasFromJsConfig');
 const packageConfig = require('../package.json');
 const isDevelopment = process.env.NODE_ENV;
 const path = require('path');
 const __ROOT = process.cwd();
 const webpack = require('webpack');
 const serverConfig = require('./webpack.config.server');
+const alias = getWebpackAliasFromJsConfig();
 
 module.exports = {
   target: ['web', 'es5'],
@@ -14,7 +16,7 @@ module.exports = {
   devtool: 'eval-source-map',
   devServer: serverConfig,
   entry: {
-    main: path.join(__ROOT, './src/index.js'),
+    main: ['@babel/polyfill', path.join(__ROOT, './src/index.js')],
   },
   output: {
     filename: 'main.bundle.js',
@@ -78,10 +80,14 @@ module.exports = {
                   development: isDevelopment,
                 },
               ],
-            ]
+            ],
+            plugins: ["babel-plugin-styled-components"]
           }
         }
       }
     ]
+  },
+  resolve: {
+    alias
   }
 }

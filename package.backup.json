@@ -1,0 +1,49 @@
+{
+  "scripts": {
+    "start": "npm run dev -- --open",
+    "dev": "webpack serve -c config/webpack.config.dev.js --node-env=development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yeongjong310/reactWIL.git"
+  },
+  "keywords": [
+    "react",
+    "webpack",
+    "babel",
+    "postcss"
+  ],
+  "author": "yeongjong310 <tohero21@naver.com>",
+  "devDependencies": {
+    "@babel/core": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
+    "@babel/preset-react": "^7.14.5",
+    "babel-loader": "^8.2.2",
+    "babel-plugin-styled-components": "^1.13.2",
+    "css-loader": "^6.2.0",
+    "dotenv": "^10.0.0",
+    "style-loader": "^3.2.1",
+    "styled-components": "^5.3.0",
+    "webpack": "^5.50.0",
+    "webpack-cli": "^4.8.0",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.12.1",
+    "express": "^4.17.1",
+    "postcss-loader": "^4.3.0",
+    "postcss-preset-env": "^6.7.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "browserslist": {
+    "development": [
+      "last 2 versions"
+    ],
+    "production": [
+      "defaults",
+      "not dead",
+      "> 1% in KR"
+    ]
+  }
+}

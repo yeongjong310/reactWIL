@@ -6,7 +6,7 @@ module.exports = {
   port: process.env.PORT,
   index: 'index.html',
   overlay: true,
-  // hot: true,
+  hot: true,
   watchContentBase: true,
   watchOptions: {
     ignored: /node_modules/,
@@ -14,5 +14,8 @@ module.exports = {
   clientLogLevel: 'none',
   stats: 'errors-only',
   historyApiFallback: true,
-  writeToDisk: true,
+  // writeToDisk: true,
+  proxy: {
+    '/api/faq': 'http://localhost:3000',
+  },
 }
